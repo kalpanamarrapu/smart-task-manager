@@ -1,0 +1,4 @@
+project/
+│── templates/ # HTML pages
+│── static/ # CSS & JavaScript
+│── app.py # Flask backend
