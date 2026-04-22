@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Timer</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* TIMER BLOCK */
+    .timer-box {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* BUTTON */
+    .btn {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #22c55e;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn.stop {
+      background: #ef4444;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* RECORD LIST */
+    .records {
+      margin-top: 30px;
+      width: 300px;
+      max-height: 200px;
+      overflow-y: auto;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 10px;
+    }
+
+    .records h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .records li {
+      margin: 5px 0;
+      padding: 5px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>📚 Study Timer</h1>
+
+<div class="timer-box" id="timer">00:00</div>
+
+<button id="controlBtn" class="btn" onclick="toggleTimer()">▶ Start</button>
+
+<div class="records">
+  <h3>Last Sessions</h3>
+  <ul id="recordList"></ul>
+</div>
+
+<script src="{{ url_for('static', filename='study.js') }}"></script>
+</body>
+</html>

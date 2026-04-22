@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Notes</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  /* MAIN CONTAINER */
+  .notes-container {
+    width: 380px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
+  /* ADD NOTE BLOCK */
+  .add-note {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    resize: none;
+    height: 80px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .save-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #fb7185;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .save-btn:hover {
+    transform: scale(1.05);
+  }
+
+  /* NOTES LIST */
+  .notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .note {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  .delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #ef4444;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 3px 6px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>📝 Notes</h1>
+
+<div class="notes-container">
+
+  <!-- ADD NOTE BLOCK -->
+  <div class="add-note">
+    <textarea id="noteInput" placeholder="Write your note..."></textarea>
+    <button class="save-btn" onclick="addNote()">Save Note</button>
+  </div>
+
+  <!-- SAVED NOTES -->
+  <div class="notes-list" id="notesList"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='notes.js') }}"></script>
+</body>
+</html>

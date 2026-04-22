@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calendar</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  .calendar {
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .days, .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .day {
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  .date {
+    padding: 10px;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .date:hover {
+    background: #dbeafe;
+  }
+
+  .event {
+    font-size: 10px;
+    color: red;
+  }
+
+  button {
+    border: none;
+    background: #3b82f6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>📅 Calendar</h1>
+
+<div class="calendar">
+
+  <div class="header">
+    <button onclick="prevMonth()">←</button>
+    <h3 id="monthYear"></h3>
+    <button onclick="nextMonth()">→</button>
+  </div>
+
+  <div class="days">
+    <div class="day">Sun</div>
+    <div class="day">Mon</div>
+    <div class="day">Tue</div>
+    <div class="day">Wed</div>
+    <div class="day">Thu</div>
+    <div class="day">Fri</div>
+    <div class="day">Sat</div>
+  </div>
+
+  <div class="dates" id="dates"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='calendar.js') }}"></script>
+</body>
+</html>

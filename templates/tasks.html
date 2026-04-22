@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tasks</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    color: white;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  /* TASK CONTAINER */
+  .task-container {
+    width: 350px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+
+  /* TASK INPUT AREA */
+  .input-area {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+
+  .add-btn {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* TASK LIST */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .task-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .time {
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  .delete {
+    background: #ef4444;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* FLOATING + BUTTON */
+  .plus-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #22c55e;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .plus-btn:hover::after {
+    content: "Add New Task";
+    position: absolute;
+    bottom: 70px;
+    background: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>Tasks</h1>
+
+<div class="task-container">
+
+  <div class="input-area" id="inputArea">
+    <input id="taskText" placeholder="Enter task">
+    <input id="taskTime" type="time">
+    <button class="add-btn" onclick="addTask()">Add Task</button>
+  </div>
+
+  <ul id="taskList"></ul>
+
+</div>
+
+<div class="plus-btn" onclick="toggleInput()">+</div>
+
+<script src="{{ url_for('static', filename='tasks.js') }}"></script>
+
+</body>
+</html>
