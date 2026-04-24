@@ -76,10 +76,10 @@ pip install -r requirements.txt
 python app.py
 
 📂 Project Structure
-project/
-│── templates/   # HTML pages  
-│── static/      # CSS & JavaScript  
-│── app.py       # Flask backend  
+- project/
+ │── templates/   # HTML pages  
+ │── static/      # CSS & JavaScript  
+ │── app.py       # Flask backend  
 
 
 💡 Future Improvements
@@ -90,5 +90,5 @@ project/
 
 👩‍💻 Author
 
-Kalpana Marrapu
+Kalpana Kumari Marrapu
 
