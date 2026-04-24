@@ -77,9 +77,9 @@ python app.py
 
 📂 Project Structure
 - project/
- │── templates/   # HTML pages  
- │── static/      # CSS & JavaScript  
- │── app.py       # Flask backend  
+ - │── templates/   # HTML pages  
+ - │── static/      # CSS & JavaScript  
+ - │── app.py       # Flask backend  
 
 
 💡 Future Improvements
