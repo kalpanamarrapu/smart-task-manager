@@ -77,34 +77,16 @@ python app.py
 
 📂 Project Structure
 project/
-│
-├── app.py                # Flask backend
-│
-├── templates/            # HTML files
-│   ├── index.html
-│   ├── study.html
-│   ├── tasks.html
-│   ├── calendar.html
-│   └── notes.html
-│
-├── static/
-│   ├── js/               # JavaScript files
-│   │   ├── study.js
-│   │   ├── tasks.js
-│   │   ├── calendar.js
-│   │   └── notes.js
-│   │
-│   └── css/
-│       └── style.css
-│
-└── screenshots/          # Project images
+│── templates/   # HTML pages  
+│── static/      # CSS & JavaScript  
+│── app.py       # Flask backend  
 
 
 💡 Future Improvements
-Add database (SQLite / PostgreSQL)
-User authentication system
-Notifications & reminders
-Mobile responsive design
+- Add database (SQLite / PostgreSQL)
+- User authentication system
+- Notifications & reminders
+- Mobile responsive design
 
 👩‍💻 Author
 
