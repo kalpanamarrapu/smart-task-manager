@@ -1,6 +1,6 @@
 # Smart Task Manager (Flask)
 
-A full-stack productivity web application built using Flask that helps users manage daily tasks, track study time, schedule events, and take notes — all in one place.
+A full-stack productivity web application built using Flask that helps users manage daily tasks, track study time, schedule events, and take notes all in one place.
 
 ---
 
