@@ -69,11 +69,44 @@ A full-stack productivity web application built using Flask that helps users man
 
 
 ---
-
-## ▶️ How to Run Locally
-
-```bash
+▶️ How to Run Locally
 git clone https://github.com/kalpanamarrapu/smart-task-manager.git
 cd smart-task-manager
 pip install -r requirements.txt
 python app.py
+
+📂 Project Structure
+project/
+│
+├── app.py                # Flask backend
+│
+├── templates/            # HTML files
+│   ├── index.html
+│   ├── study.html
+│   ├── tasks.html
+│   ├── calendar.html
+│   └── notes.html
+│
+├── static/
+│   ├── js/               # JavaScript files
+│   │   ├── study.js
+│   │   ├── tasks.js
+│   │   ├── calendar.js
+│   │   └── notes.js
+│   │
+│   └── css/
+│       └── style.css
+│
+└── screenshots/          # Project images
+
+
+💡 Future Improvements
+Add database (SQLite / PostgreSQL)
+User authentication system
+Notifications & reminders
+Mobile responsive design
+
+👩‍💻 Author
+
+Kalpana Marrapu
+
